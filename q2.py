@@ -3,12 +3,12 @@
 comum entre eles usando o algoritmo de Euclides.
 '''
 print("Informe o valor de A e B: ", end='')
-n, m = map(int, input().split())
+a, b = map(int, input().split())
 
 def mdc_euclides():
 
-    anterior  = n
-    atual     = m
+    anterior  = a
+    atual     = b
 
     resto = atual % anterior
     while resto != 0:
@@ -18,4 +18,4 @@ def mdc_euclides():
 
     return anterior
 
-print("MDC de {} e {} = {}".format(n, m, mdc_euclides()))
+print("MDC de {} e {} = {}".format(a, b, mdc_euclides()))
