@@ -2,10 +2,7 @@
 (mdc-euclides) Dados dois números inteiros positivos, determinar o máximo divisor
 comum entre eles usando o algoritmo de Euclides.
 '''
-print("Informe o valor de A e B: ", end='')
-a, b = map(int, input().split())
-
-def mdc_euclides():
+def mdc_euclides(a, b):
 
     anterior  = a
     atual     = b
@@ -18,4 +15,6 @@ def mdc_euclides():
 
     return anterior
 
-print("MDC de {} e {} = {}".format(a, b, mdc_euclides()))
+print("Informe o valor de A e B: ", end='')
+a, b = map(int, input().split())
+print("MDC de {} e {} = {}".format(a, b, mdc_euclides(a, b)))
