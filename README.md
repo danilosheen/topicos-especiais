@@ -1,3 +1,3 @@
 # topicos-especiais
 
-# Atividade sobre cnceitos e teoremas abordados em sala de aula
+# Atividade sobre conceitos e teoremas abordados em sala de aula
