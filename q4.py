@@ -3,17 +3,28 @@
 1 e determina a solução mínima x, y inteira para equação ax + by = c.
 '''
 
-# calcular mdc com teorema de euclides
-def mdc_euclides(a, b):
+def euclides_estendido(a, b):
+    if b == 0:
+        return (a, 1, 0)
+    else:
+        d, x, y = euclides_estendido(b, a % b)
+        return (d, y, x - y * (a // b))
 
-    anterior  = a
-    atual     = b
+def solucao_minima(a, b, c):
+    d, x, y = euclides_estendido(a, b)
+    if c % d != 0:
+        return None
+    else:
+        x *= c // d
+        y *= c // d
+        return (x, y)
 
-    resto = atual % anterior
-    while resto != 0:
-        resto = anterior % atual
-        anterior = atual
-        atual = resto
+a = int(input('Informe o valor de a: '))
+b = int(input('Informe o valor de b: '))
+c = int(input('Informe o valor de c: '))
 
-    return anterior
+x, y = solucao_minima(a, b, c)
+print(f"x = {x}, y = {y}")
+    
+
 
